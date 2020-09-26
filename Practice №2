@@ -1,0 +1,48 @@
+Class Main:
+
+package com.company;
+import java.lang.*;
+
+/*
+public class Main {
+    public static void main(String[] args){
+        Author author = new Author("Рик Риордан", "riordan@gmail.com",'m');
+        System.out.println(author.toString());
+        System.out.println("Пол:" +author.GetGender());
+        author.SetEmail("new_email_riordan@gmail.com");
+        System.out.println("Новая почта:"+author.GetEmail());
+        System.out.println(author.toString());
+    }
+}
+*/
+
+Упражнение 1. Class Author
+
+public class Author {
+    private String name;
+    private String email;
+    private char gender;
+
+    public Author (String name, String email, char gender){
+        this.name = name;
+        this.email = email;
+        this.gender = gender;
+    }
+    public String GetName(){
+        return name;
+    }
+    public String GetEmail(){
+        return email;
+    }
+    public char GetGender(){
+        return gender;
+    }
+    public void SetEmail(String email){
+        this.email = email;
+    }
+    public String toString(){
+        return GetName() + "("+GetGender()+") at " + GetEmail();
+    }
+}
+
+Упражнение 2. Class Ball
