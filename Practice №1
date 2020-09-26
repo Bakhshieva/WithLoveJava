@@ -1,0 +1,136 @@
+Class Main:
+
+package com.company;
+import java.lang.*;
+
+/*
+class Main {
+     public static void main(String[] args)
+    {
+        Dog a = new Dog("Шарик", 5);
+        Dog b = new Dog("Тузик", 3);
+        Dog c = new Dog("Пуфик", 1);
+        a.message();
+        a.SetName("Бобик");
+        a.message();
+        b.message();
+        c.message();
+    }
+
+}
+*/
+
+/*
+class Main {
+    public static void main(String[] args){
+        Ball a = new Ball(50, 32, 54, "red");
+        Ball b = new Ball(30, 50, 12, "green");
+        System.out.println("Цвет мяча: "+a.GetColor());
+        a.message();
+        b.message();
+        System.out.println("Высота мяча: "+b.GetHeigth());
+    }
+}
+*/
+
+/*
+class Main{
+    public static void main(String[] args){
+        Book a = new Book("Пушкин","Капитанская дочка",1836);
+        Book b = new Book("Гоголь","Мертвые души",1842);
+        System.out.println("Название: "+a.GetName());
+        a.message();
+        b.message();
+    }
+}
+*/
+
+Упражнение 1. Class Dog:
+
+package com.company;
+import java.lang.*;
+
+public class Dog {
+    private String name;
+    private final int year;
+
+    public Dog(String a, int b)
+    {
+        name=a;
+        year=b;
+    }
+
+    public void SetName(String name)
+    {
+        this.name=name;
+    }
+
+    public void message ()
+    {
+        System.out.println("Имя собаки: "+name+" ,Возраст: "+year);
+    }
+
+}
+
+Упражнение 2. Class Ball:
+
+package com.company;
+import java.lang.*;
+
+public class Ball
+{
+    private final int length;
+    private final int width;
+    private final int heigth;
+    private final String color;
+    public Ball(int x, int y, int z,String a)
+    {
+        length=x;
+        width=y;
+        heigth=z;
+        color=a;
+    }
+
+    public int GetHeigth()
+    {
+        return heigth;
+    }
+
+    public String GetColor()
+    {
+        return color;
+    }
+
+    public void message()
+    {
+        System.out.println("Длина: "+length+", Ширина: "+ width+", Высота: "+heigth+", Цвет: "+color);
+    }
+}
+
+Упражнение 3. Class Book
+
+package com.company;
+
+public class Book
+{
+    private int year;
+    private String author;
+    private String name;
+
+    public Book(String a, String b, int c)
+    {
+        author=a;
+        name=b;
+        year=c;
+    }
+
+    public String GetName()
+    {
+        return name;
+    }
+
+    public void message()
+    {
+        System.out.println("Автор: "+author+", Название: "+name+", Год: "+year);
+    }
+}
