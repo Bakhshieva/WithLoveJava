@@ -1,0 +1,59 @@
+package com.company;
+
+public class Human
+{
+    public static void main(String[] args)
+    {
+        Head a = new Head(7);
+        Leg b = new Leg (13);
+        Hand c= new Hand(5);
+        System.out.println("Вес головы: "+a.GetWeigth()+", Вес ног: "+b.GetWeigth()+", Вес рук: "+c.GetWeigth());
+    }
+}
+
+package com.company;
+
+public class Head {
+    private double weight;
+    public Head(double x)
+    {
+        weight=x;
+    }
+
+    public double GetWeigth()
+    {
+        return weight;
+    }
+}
+
+package com.company;
+
+public class Leg {
+    private double weight;
+
+    public Leg(double x)
+    {
+        weight=x;
+    }
+
+    public double GetWeigth()
+    {
+        return weight;
+    }
+}
+
+package com.company;
+
+public class Hand {
+    private double weigth;
+
+    public Hand(double x)
+    {
+        weigth=x;
+    }
+
+    public double GetWeigth()
+    {
+        return weigth;
+    }
+}
