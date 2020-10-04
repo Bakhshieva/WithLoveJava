@@ -16,6 +16,23 @@ public class Main {
 }
 */
 
+/*
+public class TestBall {
+    public static void main(String[] args)
+    {
+        Ball ball = new Ball(100, 100);
+        System.out.println(ball.toString());
+        ball.SetX(20);
+        ball.SetY(12);
+        System.out.println("X= "+ball.GetX()+", Y= "+ball.GetY());
+        ball.SetXY(23,51);
+        System.out.println("X= "+ball.GetX()+", Y= "+ball.GetY());
+        ball.Move(30, 15);
+        System.out.println(ball.toString());
+    }
+}
+*/
+
 Упражнение 1. Class Author
 
 public class Author {
@@ -46,3 +63,47 @@ public class Author {
 }
 
 Упражнение 2. Class Ball
+
+public class Ball
+{
+    private double x=0.0;
+    private double y=0.0;
+
+    public Ball (double x, double y)
+    {
+        this.x=x;
+        this.y=y;
+    }
+    public Ball ()    {    }
+
+    public double GetX ()
+    {
+        return x;
+    }
+    public double GetY ()
+    {
+        return y;
+    }
+    public void SetX (double x)
+    {
+        this.x = x;
+    }
+    public void SetY (double y)
+    {
+        this.y = y;
+    }
+    public void SetXY (double x, double y)
+    {
+        this.x=x;
+        this.y=y;
+    }
+    public void Move (double x1, double y1)
+    {
+        x+=x1;  y+=y1;
+    }
+    public String toString()
+    {
+        return "Ball @ (" + this.x + ", " + this.y + ")";
+    }
+
+}
