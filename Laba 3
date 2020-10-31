@@ -1,0 +1,96 @@
+Вариант №1.
+
+package com.company;
+
+abstract class Dish
+{
+    protected int price;
+
+    public Dish()
+    {};
+    public Dish(int price)
+    {
+        this.price=price;
+    }
+    public void SetPrice(int price)
+    {
+        this.price=price;
+    }
+    public int GetPrice()
+    {
+        return price;
+    }
+    abstract public String toString();
+}
+
+package com.company;
+
+public class Plate extends Dish
+{
+    private String material;
+    public Plate (int price,String material)
+    {
+        this.price=price;
+        this.material=material;
+    }
+
+    public String GetMaterial()
+    {
+        return material;
+    }
+    public  void SetMaterial(String material)
+    {
+        this.material=material;
+    }
+    public String toString()
+    {
+        return "Тарелка: Материал: "+GetMaterial()+" Цена: "+GetPrice();
+    }
+}
+
+package com.company;
+
+public class Fork extends Dish
+{
+    private String material;
+
+    public Fork(int price, String material)
+    {
+        this.price=price;
+        this.material=material;
+    }
+    public String GetMaterial()
+    {
+        return material;
+    }
+
+    public  void SetMaterial(String material)
+    {
+        this.material=material;
+    }
+    public String toString()
+    {
+        return "Вилка: Материал:"+GetMaterial()+" Цена: "+GetPrice();
+    }
+}
+
+package com.company;
+
+public class TestDish
+{
+    public static void main(String[] args)
+    {
+        Dish dish = new Plate(21,"glass");
+        System.out.println(dish);
+        System.out.println("Price: "+dish.GetPrice());
+        Plate plate = (Plate)dish;
+        plate.SetMaterial("plastic");
+        System.out.println("Material:"+plate.GetMaterial());
+        System.out.println(plate);
+        Dish fork=new Fork(46,"glass");
+        fork.SetPrice(10);
+        Fork ffork=(Fork)fork;
+        ffork.SetMaterial("wood");
+        System.out.println(ffork);
+    }
+}
